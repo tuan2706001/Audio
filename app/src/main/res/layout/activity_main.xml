@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:text="@string/nameSong"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <ImageButton
+        android:id="@+id/btnPrev"
+        android:layout_width="99dp"
+        android:layout_height="67dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+
+        android:layout_marginEnd="-13dp"
+        android:layout_marginBottom="24dp"
+        android:layout_toStartOf="@+id/btnPlay"
+
+        android:background="@null"
+        android:contentDescription="@string/previous"
+        android:src="@drawable/previous"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:contentDescription="@string/next"
+        android:id="@+id/btnNext"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@null"
+        android:src="@drawable/next" />
+
+    <ImageButton
+        android:id="@+id/btnStop"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toStartOf="@+id/btnNext"
+        android:background="@null"
+        android:contentDescription="@string/pause"
+        android:src="@drawable/stop" />
+
+    <ImageButton
+        android:id="@+id/btnPlay"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="22dp"
+        android:layout_toStartOf="@+id/btnStop"
+
+        android:background="@null"
+        android:contentDescription="@string/play"
+        android:src="@drawable/play" />
+
+    <SeekBar
+        android:id="@+id/skSong"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/btnPrev"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginBottom="100dp" />
+
+    <TextView
+        android:id="@+id/txtTimeSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnPrev"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="52dp"
+        android:text="@string/timeSong"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtTimeTotal"
+        android:layout_width="63dp"
+        android:layout_height="34dp"
+
+        android:layout_above="@+id/btnNext"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="257dp"
+
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="48dp"
+        android:layout_toEndOf="@+id/txtTimeSong"
+        android:text="@string/timeSong"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+</RelativeLayout>
